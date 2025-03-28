@@ -1,0 +1,190 @@
+.ReactModal__Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 0.5em;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  z-index: 3;
+
+  user-select: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.ReactModal__Content {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0.5em;
+
+  background-color: #474747;
+  color: #eac56b;
+
+  border-radius: 1em;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+
+  z-index: 4;
+}
+
+.settings__button {
+  margin-right: 1em;
+  padding: 0.3em;
+
+  border-radius: 2em;
+  background: #474747;
+  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: linear 0.5s;
+}
+
+.settings__button:hover {
+  text-decoration: none;
+  background-color: #2f2f2f;
+
+  cursor: pointer;
+}
+
+.settings__button:active {
+  transform: scale(0.9);
+}
+
+.arrow-icon {
+  display: inline;
+
+  height: 0.6em;
+  width: 0.7em;
+
+  margin-left: 0.2em;
+
+  transition: transform 0.4s ease;
+}
+
+.arrow-icon.open {
+  transform: rotate(-90deg);
+}
+
+.slide-down {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.slide-down.open {
+  max-height: 15em;
+}
+
+.paragraph__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  cursor: pointer;
+
+  margin: 0.1em;
+}
+
+.modal-content .inline {
+  flex-direction: row;
+  align-items: center;
+}
+
+.modal-content .switch {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+
+  font-weight: 600;
+  font-size: 1.2em;
+
+  text-shadow: 5px 5px 10px #00000080;
+}
+
+.switch .custom-switch {
+  margin: 0 0.3em;
+}
+
+.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.hidden-checkbox {
+  display: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  position: absolute;
+}
+
+.custom-checkbox__container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  margin-left: 0.3em;
+
+  width: 1em;
+  height: 1em;
+}
+
+.custom-checkbox__container svg {
+  width: 100%;
+  height: 100%;
+}
+
+.custom-checkbox {
+  transition: all 0.3s ease;
+}
+
+.custom-marker {
+  stroke-dasharray: 24;
+  stroke-dashoffset: 24;
+  transition: all 0.3s ease;
+}
+
+/* При нажатии на чекбокс, меняем стиль иконки */
+.hidden-checkbox:checked + .custom-checkbox__container .custom-checkbox {
+  stroke: transparent;
+}
+
+.hidden-checkbox:checked + .custom-checkbox__container .custom-marker {
+  stroke-dashoffset: 0;
+}
+
+.paragraph__container .reset__button_container {
+  margin-right: 0;
+  margin-left: 0.5em;
+}
+
+.paragraph__container .counter__button {
+  height: 2.5em;
+  width: 2.5em;
+}
+
+.paragraph__container .reset__button {
+  width: 20px;
+  height: 20px;
+}
+
+.paragraph__container ul {
+  margin: 0 0 0 0.4em;
+  padding: 0;
+
+  font-size: 1.2em;
+
+  list-style-type: none;
+}

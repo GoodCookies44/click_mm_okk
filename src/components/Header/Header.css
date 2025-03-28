@@ -1,0 +1,114 @@
+header {
+  height: 2.8em;
+  width: 100vw;
+
+  margin: 0;
+  padding: 0 0.5em;
+
+  background: #474747;
+  border-radius: 0px 0px 1em 1em;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+nav {
+  width: 100%;
+  height: 100%;
+
+  overflow-x: auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 0.4em;
+
+  position: relative;
+}
+
+.link:link,
+.link:visited {
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: none;
+  background-color: #2f2f2f;
+
+  transform: scale(1.07);
+}
+
+.header__link {
+  padding: 0.3em;
+
+  background: #474747;
+  color: #eac56b;
+  border-radius: 0.6em;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+
+  transition: linear 0.5s;
+
+  user-select: none;
+}
+
+.header__link.active {
+  background-color: #2f2f2f;
+}
+
+.scroll-button {
+  margin: 0.5em;
+  padding: 0.1em;
+
+  border: none;
+  cursor: pointer;
+  outline: none;
+
+  background: #474747;
+  color: #f6f6f6;
+
+  border-radius: 0.6em;
+}
+
+.scroll-button:hover {
+  background-color: #2f2f2f;
+}
+
+/* Добавляем стили для ссылок в шапке, обозначая их как перетаскиваемые */
+.header__link {
+  padding: 0.3em;
+  background: #474747;
+  color: #eac56b;
+  border-radius: 0.6em;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+  transition: linear 0.5s;
+  user-select: none;
+  cursor: grab; /* Добавляем курсор grab для обозначения перетаскиваемых элементов */
+}
+
+/* Стили для активной ссылки */
+.header__link.active {
+  background-color: #2f2f2f;
+}
+
+/* Добавляем стили для ссылок при перетаскивании */
+.header__link.dragging {
+  opacity: 0.5; /* Уменьшаем неперетаскиваемые элементы во время перетаскивания */
+  cursor: grabbing; /* Изменяем курсор в режиме перетаскивания */
+}
+
+/* Стили для элемента при наведении во время перетаскивания */
+.header__link.drag-over {
+  background-color: #2f2f2f;
+}
+
+/* Стили для элемента при наведении во время перетаскивания над другим элементом */
+.header__link.dragging-over {
+  border: 2px dashed #eac56b; /* Добавляем пунктирную рамку для обозначения места, куда можно переместить элемент */
+  border-radius: 0.5em;
+}

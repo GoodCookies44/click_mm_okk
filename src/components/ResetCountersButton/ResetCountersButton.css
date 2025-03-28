@@ -1,0 +1,21 @@
+.reset__button_container{
+  margin: 0 1em .3em 0;
+  
+  display: flex;
+  justify-content:flex-end
+}
+
+.reset__button_container .counter__button{
+  width: 3.5em;
+  height: 3.5em;
+}
+
+.rotate {
+  animation: rotateIcon 1s forwards; /* Применяем анимацию и оставляем ее состояние после завершения */
+}
+
+@keyframes rotateIcon {
+  100% {
+    transform: rotate(-360deg); /* Поворачиваем на 360 градусов */
+  }
+}
